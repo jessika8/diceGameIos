@@ -10,18 +10,52 @@
         <!--Item 2-->
         <scene sceneID="fHG-7X-xRO">
             <objects>
-                <viewController id="0G3-zg-Pfn" sceneMemberID="viewController">
+                <viewController id="0G3-zg-Pfn" customClass="TwoPlayerViewController" customModule="diceGameCN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lO9-t3-RY8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLm-XT-qbT">
+                                <rect key="frame" x="32" y="152" width="103" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqg-ig-ZDZ">
+                                <rect key="frame" x="227" y="140" width="96" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Og-gl-pzv">
+                                <rect key="frame" x="87" y="335" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKy-Hb-Xe1">
+                                <rect key="frame" x="123" y="536" width="168" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonFunction:" destination="0G3-zg-Pfn" eventType="touchUpInside" id="bjL-SA-Imi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VRB-wO-JvK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="elA-1o-xMf"/>
+                    <connections>
+                        <outlet property="diceImage" destination="9Og-gl-pzv" id="QUa-cn-uEi"/>
+                        <outlet property="playerOneScoreLabel" destination="oLm-XT-qbT" id="sMh-2m-2MT"/>
+                        <outlet property="playerTwoScoreLabel" destination="iqg-ig-ZDZ" id="RWz-px-CVz"/>
+                        <outlet property="rollButton" destination="hKy-Hb-Xe1" id="GEP-U2-icl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8d-gb-3rc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916" y="426"/>
+            <point key="canvasLocation" x="-917.39130434782612" y="425.89285714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VPt-BL-IVB">
