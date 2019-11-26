@@ -15,15 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLm-XT-qbT">
-                                <rect key="frame" x="32" y="152" width="103" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player One Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLm-XT-qbT">
+                                <rect key="frame" x="32" y="152" width="143" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqg-ig-ZDZ">
-                                <rect key="frame" x="227" y="140" width="96" height="98"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Two Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqg-ig-ZDZ">
+                                <rect key="frame" x="227" y="140" width="151" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -41,12 +41,21 @@
                                     <action selector="buttonFunction:" destination="0G3-zg-Pfn" eventType="touchUpInside" id="bjL-SA-Imi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exe-5D-h6R">
+                                <rect key="frame" x="96" y="705" width="223" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="function:" destination="0G3-zg-Pfn" eventType="touchUpInside" id="n9h-1x-Rgn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VRB-wO-JvK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="elA-1o-xMf"/>
                     <connections>
+                        <outlet property="buttonEnabled" destination="exe-5D-h6R" id="BsU-G3-iwr"/>
                         <outlet property="diceImage" destination="9Og-gl-pzv" id="QUa-cn-uEi"/>
                         <outlet property="playerOneScoreLabel" destination="oLm-XT-qbT" id="sMh-2m-2MT"/>
                         <outlet property="playerTwoScoreLabel" destination="iqg-ig-ZDZ" id="RWz-px-CVz"/>
@@ -57,10 +66,27 @@
             </objects>
             <point key="canvasLocation" x="-917.39130434782612" y="425.89285714285711"/>
         </scene>
+        <!--Two Players Statistics-->
+        <scene sceneID="YFf-bK-CyU">
+            <objects>
+                <viewController id="gyH-sU-vE8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSD-rW-RDm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eC6-el-zah"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Two Players Statistics" id="eeF-0p-Pv7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70c-wj-7nS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="422"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VPt-BL-IVB">
             <objects>
                 <tabBarController id="baU-Fh-82e" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="71d-7R-N28"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aC9-bA-NHm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -69,6 +95,8 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WFD-gb-Cbd"/>
                         <segue destination="0G3-zg-Pfn" kind="relationship" relationship="viewControllers" id="fMj-gs-cFA"/>
+                        <segue destination="uC7-Kn-NRn" kind="relationship" relationship="viewControllers" id="B6C-pm-zue"/>
+                        <segue destination="gyH-sU-vE8" kind="relationship" relationship="viewControllers" id="qQ9-Ex-TKu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5g-kS-4DT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,13 +130,23 @@
                                 <rect key="frame" x="77" y="224" width="240" height="279"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkm-g8-BlC">
+                                <rect key="frame" x="96" y="656" width="223" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oE3-bf-FjJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="One player" id="Rm0-eL-BWF"/>
+                    <navigationItem key="navigationItem" id="M25-uQ-XVv"/>
                     <connections>
                         <outlet property="diceImage" destination="yQh-hp-lqW" id="TY7-jJ-gqX"/>
+                        <outlet property="resetButton" destination="Wkm-g8-BlC" id="SlR-5B-jLj"/>
                         <outlet property="rollButton" destination="Wx4-86-NJX" id="U3n-AU-xg5"/>
                         <outlet property="rulesLabel" destination="UCV-MI-EQv" id="XU1-dF-Jj5"/>
                     </connections>
@@ -116,6 +154,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-914" y="-222"/>
+        </scene>
+        <!--One Player Statistics-->
+        <scene sceneID="EhX-IO-fHq">
+            <objects>
+                <viewController id="uC7-Kn-NRn" customClass="StatisticsViewController" customModule="diceGameCN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LKe-1g-drR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aud-tm-UYc">
+                                <rect key="frame" x="20" y="360" width="374" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGu-Pb-No7">
+                                <rect key="frame" x="20" y="487" width="374" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uX-G4-tTn">
+                                <rect key="frame" x="20" y="211" width="374" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kGv-g3-ltp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="One Player Statistics" id="nTA-Bt-k7R"/>
+                    <navigationItem key="navigationItem" id="F1Q-Qz-cNB"/>
+                    <connections>
+                        <outlet property="sucessRateLabel" destination="oGu-Pb-No7" id="0zB-bn-IEU"/>
+                        <outlet property="timesPlayedLabel" destination="1uX-G4-tTn" id="aYT-BV-JUG"/>
+                        <outlet property="timesWonLabel" destination="Aud-tm-UYc" id="P5S-3r-lDN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDy-Sf-VkE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230.43478260869566" y="-196.20535714285714"/>
         </scene>
     </scenes>
 </document>

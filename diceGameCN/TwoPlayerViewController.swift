@@ -49,16 +49,17 @@ class TwoPlayerViewController: UIViewController {
         print(randomRollIndex)
         
         if (playerOneTurn == true) {
-            if(randomRollIndex != 1) {
+            if(randomRollIndex != 0) {
                 playerOneScore += randomRollIndex + 1
                 playerOneTurn = false
                 playerTwoTurn = true
                 playerOneScoreLabel.text = "\(playerOneScore)"
+                hasThePlayerWon()
             }
             else {
                 playerOneScore = 0
                 playerTwoScore = 0
-                 diceLogic()
+                 gameOver()
             }
         }
         
@@ -66,16 +67,17 @@ class TwoPlayerViewController: UIViewController {
        
         
         else if (playerTwoTurn == true) {
-            if (randomRollIndex != 1) {
+            if (randomRollIndex != 0) {
                 playerTwoScore += randomRollIndex + 1
                 playerTwoTurn = false
                 playerOneTurn = true
                 playerTwoScoreLabel.text = "\(playerTwoScore)"
+                hasThePlayerWon()
             }
             else {
                 playerTwoScore = 0
                 playerOneScore = 0
-                diceLogic()
+                gameOver()
             }
         }
         
@@ -83,23 +85,67 @@ class TwoPlayerViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var buttonEnabled: UIButton!
     
-    func diceLogic() {
+    func hasThePlayerWon() {
+        if (playerOneScore >= 21) {
+        playerOneScoreLabel.text = "you won"
+        playerOneScore = 0
+        playerTwoScore = 0
+            buttonEnabledFunction()
+        }
+        else if (playerTwoScore >= 21) {
+             playerTwoScoreLabel.text = "you won"
+        playerOneScore = 0
+        playerTwoScore = 0
+            buttonEnabledFunction()
+        }
+    }
+    
+    
+    @IBAction func function(_ sender: Any) {
+        buttonEnabledFunction()
+    }
+    
+    func buttonEnabledFunction() {
+        if (buttonEnabled.isEnabled) {
+            buttonEnabled.isEnabled = false
+        }
+        else {
+            buttonEnabled.isEnabled = true
+        }
+    }
+    
+    func gameOver() {
         if (randomRollIndex == 0) {
             
             playerOneScore = 0
             playerTwoScore = 0
-            print("You lost")
-        }
-        else if (playerOneScore >= 21 || playerTwoScore >= 21) {
-            playerOneScore = 0
-            playerTwoScore = 0
-            print("You won!")
-        }
-        else {
-            return
+           
         }
     }
+    
+//    func diceLogic() {
+//        if (randomRollIndex == 0) {
+//             print("You lost")
+//            playerOneScoreLabel.text = "you lose"
+//            playerTwoScoreLabel.text = "you lose"
+//            playerOneScore = 0
+//            playerTwoScore = 0
+//
+//        }
+//        else if (playerOneScore >= 21 || playerTwoScore >= 21) {
+//            print("You won!")
+//            playerOneScoreLabel.text = "you won"
+//            playerTwoScoreLabel.text = "you won"
+//            playerOneScore = 0
+//            playerTwoScore = 0
+//
+//        }
+//        else {
+//            return
+//        }
+//    }
     
     
     override func viewDidLoad() {

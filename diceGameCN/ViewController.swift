@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImage: UIImageView!
     @IBOutlet weak var rollButton: UIButton!
     
+    @IBOutlet weak var resetButton: UIButton!
     
     // MARK: functions
 
@@ -37,8 +38,16 @@ class ViewController: UIViewController {
             rollLogic()
     }
     
+    @IBAction func resetButtonAction(_ sender: Any) {
+          playerScore = 0
+        rulesLabel.text = "\(playerScore)"
+        buttonEnabled()
+        resetButton.isHidden = true
+    }
+    
+  
     func rollLogic() {
-        randomRollIndex = Int.random(in: 0...5)
+    randomRollIndex = Int.random(in: 0...5)
         diceImage.image = dice[randomRollIndex]
         print(randomRollIndex)
         playerScore += randomRollIndex + 1
@@ -47,23 +56,58 @@ class ViewController: UIViewController {
     }
     
     
-    func diceLogic() {
+    
+
+
+        func diceLogic() {
         if (randomRollIndex == 0) {
             playerScore = 0
             print("You lost")
+            buttonEnabled()
+//            timesPlayedCounter()
         }
         else if (playerScore >= 21) {
             playerScore = 0
             print("You won!")
+            buttonEnabled()
+            resetButton.isHidden = false
+            timesPlayedCounter()
+            timesWonCounter()
+           
         }
         else {
             return
         }
+            timesPlayedCounter()
+             successRateCounter()
     }
     
+    func statistics() {
+        
+    }
+    
+    func buttonEnabled() {
+        rollButton.setTitle("Press me to play", for: .normal)
+        if (rollButton.isEnabled) {
+            rollButton.isEnabled = false
+        }
+        else {
+            rollButton.isEnabled = true
+        }
+        
+        resetButton.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("view did appear")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("view did load")
+        rollButton.setTitle("Press me", for: .normal)
+        resetButton.setTitle("Reset me", for: .normal)
+        resetButton.isHidden = true
         // Do any additional setup after loading the view.
     }
     
