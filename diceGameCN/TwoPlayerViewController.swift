@@ -35,6 +35,8 @@ class TwoPlayerViewController: UIViewController {
     @IBOutlet weak var diceImage: UIImageView!
     @IBOutlet weak var rollButton: UIButton!
     
+     @IBOutlet weak var resetButton: UIButton!
+    
     
     // MARK: functions
 
@@ -58,13 +60,11 @@ class TwoPlayerViewController: UIViewController {
             }
             else {
                 playerOneScore = 0
+                playerOneScoreLabel.text = "You lost! Try agan"
                 playerTwoScore = 0
                  gameOver()
             }
         }
-        
-        
-       
         
         else if (playerTwoTurn == true) {
             if (randomRollIndex != 0) {
@@ -76,80 +76,74 @@ class TwoPlayerViewController: UIViewController {
             }
             else {
                 playerTwoScore = 0
+                playerTwoScoreLabel.text = "You Lost! Try agan!"
                 playerOneScore = 0
                 gameOver()
             }
         }
         
-         
-        
     }
     
-    @IBOutlet weak var buttonEnabled: UIButton!
+   
     
     func hasThePlayerWon() {
         if (playerOneScore >= 21) {
-        playerOneScoreLabel.text = "you won"
+        playerOneScoreLabel.text = "You WON"
         playerOneScore = 0
         playerTwoScore = 0
             buttonEnabledFunction()
+            resetButton.isHidden = false
         }
         else if (playerTwoScore >= 21) {
-             playerTwoScoreLabel.text = "you won"
+             playerTwoScoreLabel.text = "You WON"
         playerOneScore = 0
         playerTwoScore = 0
             buttonEnabledFunction()
+            resetButton.isHidden = false
         }
     }
     
     
     @IBAction func function(_ sender: Any) {
+       playerOneScore = 0
+        playerTwoScore = 0
+        playerOneScoreLabel.text = "\(playerOneScore)"
+        playerTwoScoreLabel.text = "\(playerTwoScore)"
         buttonEnabledFunction()
+        resetButton.isHidden = true
     }
     
     func buttonEnabledFunction() {
-        if (buttonEnabled.isEnabled) {
-            buttonEnabled.isEnabled = false
+        rollButton.setTitle("Press me to play", for: .normal)
+        if (rollButton.isEnabled) {
+            rollButton.isEnabled = false
         }
         else {
-            buttonEnabled.isEnabled = true
+            rollButton.isEnabled = true
         }
+        resetButton.isHidden = false
     }
     
     func gameOver() {
         if (randomRollIndex == 0) {
-            
             playerOneScore = 0
             playerTwoScore = 0
+            buttonEnabledFunction()
            
         }
     }
     
-//    func diceLogic() {
-//        if (randomRollIndex == 0) {
-//             print("You lost")
-//            playerOneScoreLabel.text = "you lose"
-//            playerTwoScoreLabel.text = "you lose"
-//            playerOneScore = 0
-//            playerTwoScore = 0
-//
-//        }
-//        else if (playerOneScore >= 21 || playerTwoScore >= 21) {
-//            print("You won!")
-//            playerOneScoreLabel.text = "you won"
-//            playerTwoScoreLabel.text = "you won"
-//            playerOneScore = 0
-//            playerTwoScore = 0
-//
-//        }
-//        else {
-//            return
-//        }
-//    }
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        print("view did appear")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("view did load")
+        rollButton.setTitle("Press me", for: .normal)
+        resetButton.setTitle("Reset me", for: .normal)
+        resetButton.isHidden = true
         // Do any additional setup after loading the view.
     }
     

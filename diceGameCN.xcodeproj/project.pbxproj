@@ -16,6 +16,8 @@
 		369E1FA1238C3B730088D10F /* TwoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369E1FA0238C3B730088D10F /* TwoPlayerViewController.swift */; };
 		36D6476C238D791D00CEE368 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6476B238D791D00CEE368 /* StatisticsViewController.swift */; };
 		36D6476E238D79F700CEE368 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6476D238D79F700CEE368 /* Statistics.swift */; };
+		36D64770238EC23500CEE368 /* TwoPlayerStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D6476F238EC23500CEE368 /* TwoPlayerStatistics.swift */; };
+		36D64772238EC76800CEE368 /* TwoStatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D64771238EC76800CEE368 /* TwoStatisticViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		369E1FA0238C3B730088D10F /* TwoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayerViewController.swift; sourceTree = "<group>"; };
 		36D6476B238D791D00CEE368 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		36D6476D238D79F700CEE368 /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		36D6476F238EC23500CEE368 /* TwoPlayerStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayerStatistics.swift; sourceTree = "<group>"; };
+		36D64771238EC76800CEE368 /* TwoStatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoStatisticViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +71,10 @@
 				369E1F90238C2C460088D10F /* ViewController.swift */,
 				36D6476B238D791D00CEE368 /* StatisticsViewController.swift */,
 				36D6476D238D79F700CEE368 /* Statistics.swift */,
+				36D6476F238EC23500CEE368 /* TwoPlayerStatistics.swift */,
 				369E1FA0238C3B730088D10F /* TwoPlayerViewController.swift */,
 				369E1F92238C2C460088D10F /* Main.storyboard */,
+				36D64771238EC76800CEE368 /* TwoStatisticViewController.swift */,
 				369E1F95238C2C460088D10F /* Assets.xcassets */,
 				369E1F97238C2C460088D10F /* LaunchScreen.storyboard */,
 				369E1F9A238C2C460088D10F /* Info.plist */,
@@ -147,10 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D64772238EC76800CEE368 /* TwoStatisticViewController.swift in Sources */,
 				369E1F91238C2C460088D10F /* ViewController.swift in Sources */,
 				369E1F8D238C2C460088D10F /* AppDelegate.swift in Sources */,
 				369E1FA1238C3B730088D10F /* TwoPlayerViewController.swift in Sources */,
 				36D6476C238D791D00CEE368 /* StatisticsViewController.swift in Sources */,
+				36D64770238EC23500CEE368 /* TwoPlayerStatistics.swift in Sources */,
 				36D6476E238D79F700CEE368 /* Statistics.swift in Sources */,
 				369E1F8F238C2C460088D10F /* SceneDelegate.swift in Sources */,
 			);

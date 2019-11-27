@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2047543F-24DE-4CC2-A73F-C25811E61E87"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "diceGameCN/StatisticsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "StatisticsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70 - 854c0a7bdf22d690"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "diceGameCN.StatisticsViewController.timesPlayedLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "diceGameCN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codenation/Desktop/Week9/diceGameCN%20copy/diceGameCN/StatisticsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70 - 6dcf2cf6df388a6c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "diceGameCN.StatisticsViewController.timesPlayedLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "diceGameCN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codenation/Desktop/Week9/diceGameCN%20copy/diceGameCN/StatisticsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70 - 13cc40136e9c8993"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "diceGameCN.StatisticsViewController.timesPlayedLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "diceGameCN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codenation/Desktop/Week9/diceGameCN%20copy/diceGameCN/StatisticsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70 - bef40a1297a5e237"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "diceGameCN.StatisticsViewController.timesPlayedLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "diceGameCN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codenation/Desktop/Week9/diceGameCN%20copy/diceGameCN/StatisticsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70 - 21c5b9b874a7a106"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "diceGameCN.StatisticsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; diceGameCN.StatisticsViewController"
+                  moduleName = "diceGameCN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codenation/Desktop/Week9/diceGameCN%20copy/diceGameCN/StatisticsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "86BF3D1C-386F-4621-BE24-266D2FB37D70 - 6d2241dd9a896244"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "diceGameCN.StatisticsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;diceGameCN.StatisticsViewController&gt;"
+                  moduleName = "diceGameCN"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codenation/Desktop/Week9/diceGameCN%20copy/diceGameCN/StatisticsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
