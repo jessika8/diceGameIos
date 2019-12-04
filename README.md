@@ -8,7 +8,7 @@ I wanted to know how Xcode works and what is the syntax for SwiftUI.
 ## What have I achieved so far?
 * Player one works, it calculates the points together, displays points, changes the dice picture, re-start button works, start-the-game button works
 * Player one score sheet displays data about - how many times you have played, how many times you have won and what is the % of the wins
-* Two player game is taking turns, calculates the points together, shows the points, shows who has won\lost, restart game button is working, start the game button is working 
+* Two player game is taking turns, calculates the points together, shows the points, shows who has won\lost, re-start game button is working, start the game button is working 
 
 ## How can I make the project better?
 * Two-player game datasheet needs correcting - it is not displaying the data correctly
