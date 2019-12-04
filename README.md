@@ -1,4 +1,4 @@
-# diceGameIos
+# diceGameiOS
 A simple dice game using SwiftUI and Xcode. You can play alone or take turns with someone. It also displays the game data - how many times have you played, how many times have you won and what is the winning %
 
 
